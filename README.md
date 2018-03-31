@@ -1,8 +1,3 @@
-# git-operation
-git学习
-
-
-Workspace：工作区
-Index / Stage：暂存区
-Repository：仓库区（或本地仓库）
-Remote：远程仓库
+该工程记录自己学习的历程，希望自己技术能够快快提高。加油！
+#  20180331
+第一次提交。目录待调整

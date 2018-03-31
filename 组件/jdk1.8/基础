@@ -1,0 +1,6 @@
+#win10系统jdk1.8安装报错1335，cab文件已受损：  暂未解决，更jdk版本。
+
+jdk环境变量配置：
+JAVA_HOME=D:\Program Files\Java\jdk1.8.0_161
+Path=%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+CLASSPATH=.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar

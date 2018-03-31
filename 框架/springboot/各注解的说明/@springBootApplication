@@ -1,0 +1,18 @@
+spring-boot-autoconfig.jar中。复合注解
+放在springboot的main函数中，
+从源代码中得知 @SpringBootApplication 被 @Configuration、@EnableAutoConfiguration、@ComponentScan 注解所修饰，
+换言之 Springboot 提供了统一的注解来替代以上三个注解
+
+@Configuration：类级注释，指示对象是一个bean定义的源。@Configuration 类通过 @bean 注解的公共方法声明bean。表明该类是一个配置类
+@Bean 注释是用来表示一个方法实例化，配置和初始化是由 Spring IoC 容器管理的一个新的对象
+
+@EnableAutoConfiguration   自动配置类。通常推荐将 @EnableAutoConfiguration 配置在 root 包下，
+这样所有的子包、类都可以被查找到。使用的是 SpringFactoriesLoader 机制（以 EnableAutoConfiguration 类路径为 key）。
+通常 auto-configuration beans 是 @Conditional beans（在大多数情况下配合 @ConditionalOnClass 和 @ConditionalOnMissingBean 注解进行使用）
+SpringFactoriesLoader 机制：
+SpringFactoriesLoader会查询包含 META-INF/spring.factories 文件的JAR。
+当找到spring.factories文件后，SpringFactoriesLoader将查询配置文件命名的属性。
+EnableAutoConfiguration的 key 值为org.springframework.boot.autoconfigure.EnableAutoConfiguration
+。根据此 key 对应的值进行 spring 配置。在 spring-boot-autoconfigure.jar文件中，包含一个 spring.factories 文件
+
+@ComponentScan 为 @Configuration注解的类配置组件扫描指令

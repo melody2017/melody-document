@@ -1,0 +1,17 @@
+直接解压即可使用
+
+环境变量设置：
+MAVEN_HOME=D:\Program Files (x86)\apache-maven-3.5.3
+Path变量值的末尾加上%MAVEN_HOME%\bin（注意：跟前面变量值要以英文分号间隔）。
+
+
+配置maven仓库为阿里云：settings.xml文件中增加如下配置：
+<mirror>
+ <id>alimaven</id>
+ <name>aliyun maven</name>
+ <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+ <mirrorOf>central</mirrorOf>
+</mirror>
+
+设置私有仓库路径：
+<localRepository>D:\localRepository</localRepository>

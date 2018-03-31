@@ -1,0 +1,46 @@
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.47</version>
+</dependency>
+
+两种方式：
+第一种方式：
+启动类继承 WebMvcConfigurerAdapter
+覆盖configureMessageConverters方法
+@Override
+public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+  //定义一个转换消息的对象
+  FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
+
+  FastJsonConfig config = new FastJsonConfig();
+
+  config.setSerializerFeatures(SerializerFeature.PrettyFormat);
+
+  //在转换器中添加配置信息
+  fastJsonHttpMessageConverter.setFastJsonConfig(config);
+
+  //将转换器添加到converters
+  converters.add(fastJsonHttpMessageConverter);
+}
+
+第二种方式：
+启动类注入Bean HttpMessageConverters
+@Bean
+    public HttpMessageConverters fastjsonHttpMessageConverter(){
+        //定义一个转换消息的对象
+        FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
+
+        //添加fastjson的配置信息 比如 ：是否要格式化返回的json数据
+        FastJsonConfig fastJsonConfig = new FastJsonConfig();
+
+        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
+
+        //在转换器中添加配置信息
+        fastConverter.setFastJsonConfig(fastJsonConfig);
+
+        HttpMessageConverter<?> converter = fastConverter;
+
+        return new HttpMessageConverters(converter);
+
+    }
