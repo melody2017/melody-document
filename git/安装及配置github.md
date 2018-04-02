@@ -21,6 +21,18 @@ c. 点击 Add SSH key 按钮添加一个 SSH key 。
 上面的 Title 所对应的输入框你也可以输入一个该 SSH key
 显示在 github 上的一个别名。默认的会使用你的邮件名称。
 
+## TortoiseGit
+### 密钥配置
+TortoiseGit 使用扩展名为ppk的密钥，而不是ssh-keygen生成的rsa密钥。使用命令ssh-keygen -C "邮箱地址" -t rsa产生的密钥在TortoiseGit中不能用。而基于git的开发必须要用到rsa密钥，因此需要用到TortoiseGit的putty key generator工具来生成既适用于git的rsa密钥也适用于TortoiseGit的ppk密钥。
+
+打开putty自动生产ppk密钥工具，将ssh中之前生产的密钥导入进来，然后利用Pageant保存增加进来即可。
+[参考](https://blog.csdn.net/bendanbaichi1989/article/details/17916795)
+###   状态图标不能正常显示
+1. 修改注册表
+2. 在TortoiseGit 重新设置setting中的Icon Overlays/Icon Set,亲测可用
+
 ## 关联github提交代码
 1. 在github中创建仓库
+2. 在个github中复制clone命令，克隆代码到本地
+3. 本地提交修改即可
 

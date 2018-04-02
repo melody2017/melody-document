@@ -6,4 +6,8 @@ http://app.myzaker.com/news/article.php?pk=59951dff1bc8e0187b000015
 
 # 使用技巧
 ## 保存时自动去除空格
-settings中找到whitespace插件，然后disable它
+settings中找到whitespace插件，然后disable它。
+
+## 关联git提交代码
+
+## 关联github
