@@ -5,5 +5,5 @@
 ## markdown如何添加图片
 [极简图床](http://jiantuku.com/#/)  
 可供选择的图床有：微博图床、七牛云、阿里云 
-下面使用的是路过图床
-[![CS2rA1.md.png](https://s1.ax1x.com/2018/04/02/CS2rA1.md.png)](https://imgchr.com/i/CS2rA1)
+下面使用的是[Lofter](http://www.lofter.com/)  
+![CS2rA1.md.png](http://imglf5.nosdn.127.net/img/Z3JBcDVLWHRpSFhwOUN5YytuR2FDZkhmcmsyQ1hSNXJOMXFXd1gzekZxMTJROWRiU1VPMFpRPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0)
