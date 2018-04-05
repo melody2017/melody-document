@@ -23,9 +23,9 @@ c. 点击 Add SSH key 按钮添加一个 SSH key 。
 
 ## TortoiseGit
 ### 密钥配置
-TortoiseGit 使用扩展名为ppk的密钥，而不是ssh-keygen生成的rsa密钥。使用命令ssh-keygen -C "邮箱地址" -t rsa产生的密钥在TortoiseGit中不能用。而基于git的开发必须要用到rsa密钥，因此需要用到TortoiseGit的putty key generator工具来生成既适用于git的rsa密钥也适用于TortoiseGit的ppk密钥。
-![](http://imglf6.nosdn.127.net/img/Z3JBcDVLWHRpSFZvcGc1OUUrckdaS2o0Y1Z1ZWlvb1ozU3R1M05JZDlNMzBoSlkzM2FINjdBPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0)
-打开putty自动生产ppk密钥工具，将ssh中之前生产的密钥导入进来，然后利用Pageant保存增加进来即可。
+TortoiseGit 使用扩展名为ppk的密钥，而不是ssh-keygen生成的rsa密钥。使用命令ssh-keygen -C "邮箱地址" -t rsa产生的密钥在TortoiseGit中不能用。而基于git的开发必须要用到rsa密钥，因此需要用到TortoiseGit的putty key generator工具来生成既适用于git的rsa密钥也适用于TortoiseGit的ppk密钥。打开putty自动生产ppk密钥工具，将ssh中之前生产的密钥导入进来，然后利用Pageant保存增加进来即可。  
+![](http://imglf6.nosdn.127.net/img/Z3JBcDVLWHRpSFZvcGc1OUUrckdaS2o0Y1Z1ZWlvb1ozU3R1M05JZDlNMzBoSlkzM2FINjdBPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0)  
+
 
 
 [参考](https://blog.csdn.net/bendanbaichi1989/article/details/17916795)
