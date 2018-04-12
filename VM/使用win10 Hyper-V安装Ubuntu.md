@@ -6,6 +6,7 @@
 3. 打开控制面板->程序和功能->启用或关闭Windows功能 ，找到Hyper-V并展开，全部勾选后点击确定,重启即可完成安装。
 
 ### 安装Ubuntu
+[Windows 10下通过Hyper-V安装Ubuntu 16.04](https://www.linuxidc.com/Linux/2016-04/129750.htm)  
 1. 打开hyper-V，然后再Hyper-V管理器上右键->新建虚拟机  
 [Ubuntu14.04i下载地址](https://www.linuxidc.com/Linux/2016-02/128506.htm)
 
