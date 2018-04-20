@@ -48,7 +48,26 @@ sudo apt-get autoremove --purge
 ```
 刚安装后卸载可能不会成功，可能是因为刚安装完软件，软件源还来不及更新，所以才会无法找到包。可以先使用apt-get update
 
-7. Docker中配置国内镜像  
+7. Ubuntu下docker使用非root权限运行docker
+默认情况下，docker 命令会使用 Unix socket 与 Docker 引擎通讯。而只有 root 用户和 docker 组的用户才可以访问 Docker 引擎的 Unix socket。出于安全考虑，一般 Linux 系统上不会直接使用 root 用户。因此，更好地做法是将需要使用 docker 的用户加入 docker 用户组。
+  1. 添加 docker group ：
+  ```
+  sudo groupadd docker
+  ```
+  2. 将用户加入该 group 内
+  ```
+  $ sudo usermod -aG docker $USER
+# 或者使用下面命令
+$ sudo gpasswd -a ${USER} docker
+  ```
+  3. 重启服务
+  ```
+  $ sudo service docker restart
+# 或者
+$ sudo /etc/init.d/docker restart
+  ```
+
+8. Docker中配置国内镜像  
   1. 为什么要为docker配置国内镜像  
   在正常情况下，docker有一个默认连接的国外官方镜像，在国外的网友访问该官方镜像自然不成问题，
   但是国内毕竟不是国外，由于国情不同，中国的网络访问国外官方镜像网速一向很慢，而且往往还会遭遇断网的窘境，所以说我们要想正常使用docker的镜像，那么我们就不得不配置相应的国内镜像
@@ -73,7 +92,8 @@ systemctl restart docker
 [配置阿里云镜像仓库](https://jingyan.baidu.com/album/f3e34a12c607f4f5eb653596.html?picindex=5)
 
 https://17pk264r.mirror.aliyuncs.com
-  
+
+
 
 
 
