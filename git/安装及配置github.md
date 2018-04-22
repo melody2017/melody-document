@@ -38,3 +38,9 @@ TortoiseGit 使用扩展名为ppk的密钥，而不是ssh-keygen生成的rsa密�
 2. 在个github中复制clone命令，克隆代码到本地
 3. 本地提交修改即可
 
+## 本地代码与github关联
+1. git init  初始化，生产.git文件
+2. 正常add、commit提交
+3. 生成远端库：git remote add origin https://github.com/melody2017/melody-dubbo-parent.git
+4. 正常推送代码：git push -u origin master 
+
