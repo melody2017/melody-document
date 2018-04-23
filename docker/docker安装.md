@@ -92,7 +92,14 @@ systemctl restart docker
 [配置阿里云镜像仓库](https://jingyan.baidu.com/album/f3e34a12c607f4f5eb653596.html?picindex=5)
 
 https://17pk264r.mirror.aliyuncs.com
-
+## FAQ
+### Docker的Ubuntu镜像安装的容器无ifconfig命令和ping命令
+安装：
+```
+apt-get update
+apt install net-tools       # ifconfig 
+apt install iputils-ping     # ping
+```
 
 
 
