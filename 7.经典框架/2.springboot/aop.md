@@ -6,4 +6,3 @@
 ```
 [博客Spring boot中使用aop详解](https://www.cnblogs.com/bigben0123/p/7779357.html)
 
-![]()
