@@ -18,3 +18,6 @@ Docker Register是一个集中存储与分发镜像的服务。构建完Docker�
 >必须是 64 位操作系统,  
 建议内核在 3.8 以上
 centos、Ubuntu操作系统
+
+# 使用记录
+

@@ -3,7 +3,7 @@
 
 本机虚拟机信息:
 
-192.168.0.113     melody/root
+192.168.1.250     melody/root
 
 
 github : wangkx2010@foxmail.com    ismp.1314
