@@ -5,7 +5,16 @@
 ```
 1. 查看ssh服务是否启动： ps -ef | grep sshd  或者 /etc/init.d/ssh status
 2. 修改静态ip： 
-
+/etc/network/interfaces
+auto lo
+iface lo inet loopback
+ 
+auto eth0
+iface eth0 inet static *******定义为静态IP
+ 
+address 192.168.2.29  *******所要设置的IP地址
+netmask 255.255.255.0 *******子网掩码
+gateway 192.168.2.1  *******网关（路由地址）
 ```
 
 ## 2. 操作
@@ -20,10 +29,11 @@ iface lo inet loopback
 auto eth0
 iface eth0 inet static *******定义为静态IP
  
-address 192.168.2.29  *******所要设置的IP地址
+address 192.168.1.168  *******所要设置的IP地址
 netmask 255.255.255.0 *******子网掩码
-gateway 192.168.2.1  *******网关（路由地址）
-
+gateway 192.168.0.1  *******网关（路由地址）
+dns-nameserver 192.168.1.1     ****可以通过windows上查看后配置
+```
 2. 手动设置DNS服务器
 打开文件/etc/resolv.conf，设置内容如下
 nameserver 192.168.2.1 ******网关（同上）
@@ -55,7 +65,10 @@ dns-nameservers 8.8.8.8
 在里面插入：
 nameserver 8.8.8.8
 nameserver 8.8.4.4
-如果有多个DNS就一行一个
+如果有多个DNS就一行一个resolvconf -u
 
 ### 安装软件
 1. ssh安装：apt-get install ssh
+
+
+
